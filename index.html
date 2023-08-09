@@ -7,6 +7,8 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
 	</head>
 	<body class="is-preload">
 
@@ -90,33 +92,48 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+			
 
 			<script>
 				document.addEventListener("DOMContentLoaded", function() {
-				emailjs.init("YOUR_USER_ID"); // Initialize with your EmailJS user ID.
-
-				const contactForm = document.getElementById("contactForm");
-
-				contactForm.addEventListener("submit", function(event) {
-					event.preventDefault();
-
-					const formData = new FormData(contactForm);
-					const data = {
-						name: formData.get("name"),
-						email: formData.get("email"),
-						message: formData.get("message")
-					};
-
-					emailjs.send("gmail", "YOUR_TEMPLATE_ID", data)
-						.then(function(response) {
-							alert('Message sent successfully!');
-						}, function(error) {
-							alert('Failed to send the message. ' + JSON.stringify(error));
-						});
+					emailjs.init("5KmMnmwWzKPmiTJMk"); // Initialize with your EmailJS user ID.
+			
+					const contactForm = document.getElementById("contactForm");
+			
+					contactForm.addEventListener("submit", function(event) {
+						event.preventDefault();
+			
+						const formData = new FormData(contactForm);
+						const data = {
+							name: formData.get("name"),
+							email: formData.get("email"),
+							message: formData.get("message")
+						};
+			
+						emailjs.send("service_2nv2287", "template_4s1z5ec", data)
+							.then(function(response) {
+								Toastify({
+									text: "Message sent successfully!",
+									duration: 3000,
+									close: true,
+									gravity: "top", // `top` or `bottom`
+									position: 'right', // `left`, `center` or `right`
+									backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+								}).showToast();
+							}, function(error) {
+								Toastify({
+									text: "Failed to send the message. " + JSON.stringify(error),
+									duration: 3000,
+									close: true,
+									gravity: "top",
+									position: 'right',
+									backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+								}).showToast();
+							});
+					});
 				});
-			});
-
 			</script>
+			
 	</body>
 </html>
