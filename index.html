@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>stepup med ac</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>StepUp Med Ac</h1>
+							<p>A Ace your learning with our all-in-one education app featuring courses, PDFs, and interactive study materials</p>
+							<ul class="actions">
+								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+							<span class="image fill" data-position="center"><img src="C:\Users\firas tn\Desktop\seats\logo-02.png" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section id="first">
+						<header>
+							<h2>Elevate Your Learning Journey😎</h2>
+						</header>
+						<div class="content">
+							<p><strong>Your Ultimate Learning Destination</strong> Introducing your new go-to learning companion! Our comprehensive education app has been carefully designed to cater to all your academic needs. With a wide range of courses and high-quality PDF files, we aim to make education more accessible and engaging for students and lifelong learners alike.</p>
+							<span class="image main"><img src="C:\Users\firas tn\Desktop\seats\تيزر3 2-02.png" alt="" /></span>
+						</div>
+					</section>
+
+
+					<section>
+						<header>
+							<h2>Get in touch</h2>
+						</header>
+						<div class="content">
+							<p><strong>Connect & Collaborate</strong> Got an idea or feedback? We value collaboration and believe that great things come from shared insights. Don't hesitate to reach out. Your thoughts could shape the next big thing. Email us and let's make waves together!</p>
+							<form id="contactForm">
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="button primary" /></li>
+								</ul>
+							</form>
+						</div>
+						<footer>
+							<ul class="items">
+								<li>
+									<h3>Email</h3>
+									<a href="#">StepUpMedAc@gmail.com</a>
+								</li>
+								<li>
+									<h3>Phone</h3>
+									<a href="#">+49 (030) 1234-5678</a>
+								</li>
+								<li>
+									<h3>Address</h3>
+									<span>Brandenburger Str. 56, 10117 Berlin, Germany</span>
+								</li>
+							</ul>
+						</footer>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+				emailjs.init("YOUR_USER_ID"); // Initialize with your EmailJS user ID.
+
+				const contactForm = document.getElementById("contactForm");
+
+				contactForm.addEventListener("submit", function(event) {
+					event.preventDefault();
+
+					const formData = new FormData(contactForm);
+					const data = {
+						name: formData.get("name"),
+						email: formData.get("email"),
+						message: formData.get("message")
+					};
+
+					emailjs.send("gmail", "YOUR_TEMPLATE_ID", data)
+						.then(function(response) {
+							alert('Message sent successfully!');
+						}, function(error) {
+							alert('Failed to send the message. ' + JSON.stringify(error));
+						});
+				});
+			});
+
+			</script>
+	</body>
+</html>
