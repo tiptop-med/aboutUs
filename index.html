@@ -1,139 +1,246 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>tiptop med ac</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Tiptop Med Ac</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #282c34;
+            color: white;
+        }
+        .intro h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .intro p {
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        .intro .actions a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #61dafb;
+            color: #282c34;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .intro .actions a:hover {
+            background-color: #21a1f1;
+        }
+        .content {
+            padding: 30px 20px;
+            background-color: white;
+            margin-top: -30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            margin-top: 0;
+            color: #282c34;
+        }
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .content img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        #contactForm {
+            margin-top: 20px;
+        }
+        .fields {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .field {
+            flex: 1;
+            min-width: 280px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            margin-top: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .actions input {
+            padding: 12px 30px;
+            background-color: #61dafb;
+            border: none;
+            color: #282c34;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .actions input:hover {
+            background-color: #21a1f1;
+        }
+        footer {
+            margin-top: 50px;
+            background-color: #282c34;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        footer h3 {
+            margin-top: 0;
+        }
+        footer a {
+            color: #61dafb;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        footer .items {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        footer .items li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
 
-	</head>
-	<body class="is-preload">
+<div id="wrapper">
+    <!-- Intro -->
+    <section class="intro">
+        <header>
+            <h1>Tiptop Med Ac</h1>
+            <p>Ace your learning with our all-in-one education app featuring courses, PDFs, and interactive study materials</p>
+            <div class="actions">
+                <a href="#first">Learn More</a>
+            </div>
+        </header>
+    </section>
+<!-- Section -->
+    <section id="first" class="content">
+        <header>
+            <h2>Elevate Your Learning Journey 😎</h2>
+        </header>
+        <p><strong>Your Ultimate Learning Destination:</strong> Introducing your new go-to learning companion! Our comprehensive education app has been carefully designed to cater to all your academic needs. With a wide range of courses and high-quality PDF files, we aim to make education more accessible and engaging for students and lifelong learners alike.</p>
+        <img src="images/تيزر3 2-02.png" alt="Learning Journey">
+    </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Contact Form -->
+    <section class="content">
+        <header>
+            <h2>Get in touch</h2>
+        </header>
+        <p><strong>Connect & Collaborate:</strong> Got an idea or feedback? We value collaboration and believe that great things come from shared insights. Don't hesitate to reach out. Your thoughts could shape the next big thing. Email us and let's make waves together!</p>
+        <form id="contactForm">
+            <div class="fields">
+                <div class="field">
+                    <input type="text" name="name" id="name" placeholder="Name" required />
+                </div>
+                <div class="field">
+                    <input type="email" name="email" id="email" placeholder="Email" required />
+                </div>
+                <div class="field">
+                    <textarea name="message" id="message" placeholder="Message" rows="7" required></textarea>
+                </div>
+            </div>
+            <div class="actions">
+                <input type="submit" value="Send Message">
+            </div>
+        </form>
+    </section>
 
-				<!-- Intro -->
-					<section class="intro">
-						<header>
-							<h1>Tiptop Med Ac</h1>
-							<p>A Ace your learning with our all-in-one education app featuring courses, PDFs, and interactive study materials</p>
-							<ul class="actions">
-								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
-							</ul>
-						</header>
-						<div class="content">
-							<span class="image fill" data-position="center"><img src="images/logo-02.png" alt="" /></span>
-						</div>
-					</section>
+    <!-- Footer -->
+    <footer>
+        <h3>Contact Information</h3>
+        <ul class="items">
+            <li>
+                <h4>Email</h4>
+                <a href="mailto:TipTopMedAc@gmail.com">TipTopMedAc@gmail.com</a>
+            </li>
+            <li>
+                <h4>Phone</h4>
+                <a href="tel:+4903012345677">+49 (030) 1234-5677</a>
+            </li>
+            <li>
+                <h4>Address</h4>
+                <span>Brandenburger Str. 56, 10117 Berlin, Germany</span>
+            </li>
+        </ul>
+    </footer>
+</div>
 
-				<!-- Section -->
-					<section id="first">
-						<header>
-							<h2>Elevate Your Learning Journey😎</h2>
-						</header>
-						<div class="content">
-							<p><strong>Your Ultimate Learning Destination</strong> Introducing your new go-to learning companion! Our comprehensive education app has been carefully designed to cater to all your academic needs. With a wide range of courses and high-quality PDF files, we aim to make education more accessible and engaging for students and lifelong learners alike.</p>
-							<span class="image main"><img src="images/تيزر3 2-02.png" alt="" /></span>
-						</div>
-					</section>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        emailjs.init("5KmMnmwWzKPmiTJMk"); // Initialize with your EmailJS user ID.
 
+        const contactForm = document.getElementById("contactForm");
 
-					<section>
-						<header>
-							<h2>Get in touch</h2>
-						</header>
-						<div class="content">
-							<p><strong>Connect & Collaborate</strong> Got an idea or feedback? We value collaboration and believe that great things come from shared insights. Don't hesitate to reach out. Your thoughts could shape the next big thing. Email us and let's make waves together!</p>
-							<form id="contactForm">
-								<div class="fields">
-									<div class="field half">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="field half">
-										<input type="email" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="field">
-										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" class="button primary" /></li>
-								</ul>
-							</form>
-						</div>
-						<footer>
-							<ul class="items">
-								<li>
-									<h3>Email</h3>
-									<a href="#">TipTopMedAc@gmail.com</a>
-								</li>
-								<li>
-									<h3>Phone</h3>
-									<a href="#">+49 (030) 1234-5677</a>
-								</li>
-								<li>
-									<h3>Address</h3>
-									<span>Brandenburger Str. 56, 10117 Berlin, Germany</span>
-								</li>
-							</ul>
-						</footer>
-					</section>
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-			</div>
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get("name"),
+                email: formData.get("email"),
+                message: formData.get("message")
+            };
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-			
+            emailjs.send("service_2nv2287", "template_4s1z5ec", data)
+                .then(function (response) {
+                    Toastify({
+                        text: "Message sent successfully!",
+                        duration: 3000,
+                        close: true,
+                        gravity: "top", // top or bottom
+                        position: 'right', // left, center or right
+                        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                    }).showToast();
+                }, function (error) {
+                    Toastify({
+                        text: "Failed to send the message. " + JSON.stringify(error),
+                        duration: 3000,
+                        close: true,
+                        gravity: "top",
+                        position: 'right',
+                        backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                    }).showToast();
+                });
+        });
+    });
+</script>
 
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					emailjs.init("5KmMnmwWzKPmiTJMk"); // Initialize with your EmailJS user ID.
-			
-					const contactForm = document.getElementById("contactForm");
-			
-					contactForm.addEventListener("submit", function(event) {
-						event.preventDefault();
-			
-						const formData = new FormData(contactForm);
-						const data = {
-							name: formData.get("name"),
-							email: formData.get("email"),
-							message: formData.get("message")
-						};
-			
-						emailjs.send("service_2nv2287", "template_4s1z5ec", data)
-							.then(function(response) {
-								Toastify({
-									text: "Message sent successfully!",
-									duration: 3000,
-									close: true,
-									gravity: "top", // `top` or `bottom`
-									position: 'right', // `left`, `center` or `right`
-									backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-								}).showToast();
-							}, function(error) {
-								Toastify({
-									text: "Failed to send the message. " + JSON.stringify(error),
-									duration: 3000,
-									close: true,
-									gravity: "top",
-									position: 'right',
-									backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
-								}).showToast();
-							});
-					});
-				});
-			</script>
-			
-	</body>
+</body>
 </html>
